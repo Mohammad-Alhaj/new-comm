@@ -23,12 +23,12 @@ function App() {
       <Category/>
       <ToastContainer/>
       <Routes>
-        <Route path='/' element={<Cards/>}/>
-        <Route path='/favorite' element={<AddToFav/>}/>
-        <Route path='/card/:id' element={<CardDetails/>}/>
-        <Route path='/cart' element={<Cart/>}/> 
-        <Route path='/clothes' element={<Clothes/>}/> 
-        <Route path='/electronics' element={<Electronics/>}/> 
+        <Route path='/new-comm' element={<Cards/>}/>
+        <Route path='/new-comm/favorite' element={<AddToFav/>}/>
+        <Route path='/new-comm/card/:id' element={<CardDetails/>}/>
+        <Route path='/new-comm/cart' element={<Cart/>}/> 
+        <Route path='/new-comm/clothes' element={<Clothes/>}/> 
+        <Route path='/new-comm/electronics' element={<Electronics/>}/> 
       </Routes>
       </When>
       <Signin/>

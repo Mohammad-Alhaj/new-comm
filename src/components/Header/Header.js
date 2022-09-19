@@ -10,9 +10,9 @@ export default function Header(props) {
       <nav className='nav'>
         <div>
           <h3>Online Shop</h3>
-       <Link to={'/'}>  <p >Home</p></Link> 
-       <Link to={'/favorite'}><p href="#features">favorite</p></Link>
-     <Link to={'/cart'}><p >Cart</p></Link>
+       <Link to={'/new-comm'}>  <p >Home</p></Link> 
+       <Link to={'/new-comm/favorite'}><p href="#features">favorite</p></Link>
+     <Link to={'/new-comm/cart'}><p >Cart</p></Link>
         </div>
         <Signout/>
       </nav>

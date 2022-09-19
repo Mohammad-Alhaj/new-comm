@@ -103,7 +103,7 @@ return(
       </Dropdown.Menu>
     </Dropdown>
     </Access>
-       <Link to={`/card/${ele.id}`}>  <Button className='p-1' variant="primary">More details</Button></Link>
+       <Link to={`/new-comm/card/${ele.id}`}>  <Button className='p-1' variant="primary">More details</Button></Link>
        </div>
         {/* <Button variant="primary"></Button>
         <Button variant="danger"></Button> */}
