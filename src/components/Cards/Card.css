@@ -1,0 +1,58 @@
+.container-cards {
+max-width: 120rem;
+padding: 0 2rem;
+margin: 5rem auto;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(4,auto);
+gap: 2rem;
+}
+.card-item {
+
+}
+.amount {
+  margin-bottom: 0.5rem;
+  padding: 5px;
+  background-color: #3c976c;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  }   
+
+.price-favor {
+/* display: flex ;
+justify-content: space-between; */
+font-size: 1.5rem;
+font-weight: 500;
+}
+.price-favor i {
+  font-size: 1.8rem;
+}
+.price-favor i:hover {
+  color:red;
+}
+  .btn_actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+ 
+    gap: .5rem;
+  }
+  .btn_ac {
+padding: 0.25rem;
+  }
+
+  @media(max-width:600px){
+    html{
+      font-size: 9px;
+    }
+  .cards {
+    grid-template-columns: repeat(2,auto); 
+
+  }
+  }
+  
+
+  

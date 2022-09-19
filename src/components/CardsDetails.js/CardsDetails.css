@@ -1,0 +1,36 @@
+.container-card-details {
+    max-width: 120rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+
+}
+
+.subtitle-item {
+font-weight: 600;
+font-size: 1.5rem;
+}
+.card-item-details {
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr) !important;
+   gap: 5rem !important;
+}
+.body-text-card {
+font-size: 3rem !important;
+font-weight: 600 ;
+}
+.text-dis {
+    font-size: 1rem;
+
+}
+.text {
+    font-size: 2.2rem !important;
+    font-weight: 600 ;
+    line-height: 1.2 !important;
+}
+
+@media(max-width:460px) {
+    .card-item-details {
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+}
+

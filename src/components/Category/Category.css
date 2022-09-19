@@ -1,0 +1,11 @@
+.category {
+    padding: 5px;
+    background-color: #f8f9fa;
+    text-align: center;
+
+}
+.category Button {
+    margin-left:3px ;
+    background-color:#e7f5ff;
+    text-decoration: none;
+}
