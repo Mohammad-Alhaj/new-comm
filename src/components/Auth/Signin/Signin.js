@@ -21,7 +21,6 @@ export default function Signin(props) {
 const dispatch = useDispatch()
 
 const {isSingin,errorSingin,isLoading} = useSelector((state)=>state.auth)
-// console.log(isSignin)
   const [justifyActive, setJustifyActive] = useState('tab1');;
 
   const handleJustifyClick = (value) => {

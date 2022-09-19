@@ -22,7 +22,6 @@ export default function Cart(props) {
     if(!array.cartOj){
         array.cartOj = []
     }
-    console.log('arra',array.cartOj)
     return(
         <>
         <h2 className="page-title">Shopping Cart</h2>

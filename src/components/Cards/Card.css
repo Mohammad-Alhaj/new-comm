@@ -55,4 +55,17 @@ padding: 0.25rem;
   }
   
 
+  .access {
+
+  background-color: #ffa8a8;
+  font-size: 1rem;
+  padding: .6rem;
+  border-radius: .6rem;
+  margin: 0 3rem;
+  text-align: center;
+  font-weight: 700;
+  margin-top:1rem ;
+  text-transform: uppercase;
+  }
+
   

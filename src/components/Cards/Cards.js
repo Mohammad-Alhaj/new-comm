@@ -27,8 +27,6 @@ useEffect(()=>{
 },[dispatch])
 
 useEffect(()=>{
-  console.log('ddddddddddddd');
-  console.log(cookie.load('token'));
   if(1){
    dispatch(isSinginRed(true))
   }else{
@@ -42,7 +40,6 @@ const postDatas = (data)=>{
     }
 
 const updatedata = (data)=>{
-    console.log(data)
     dispatch(updateData(data))
   
 }

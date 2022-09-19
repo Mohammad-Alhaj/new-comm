@@ -6,7 +6,6 @@ import { toast } from 'react-toastify';
 const url = 'https://todoappmohammadalhaj.herokuapp.com/api/v2'
 
 export const updateAmount = createAsyncThunk('cart/updateAmount', async(data,thunkApi)=>{
-    console.log(data)
     const {rejectWithValue,dispatch} = thunkApi
     const dataUpdate = {
         name:data.name,
@@ -16,7 +15,6 @@ export const updateAmount = createAsyncThunk('cart/updateAmount', async(data,thu
         amount: data.amount -1,
         image:data.image
     }
-    console.log(dataUpdate)
     try {
         const req = await axios.put(`${url}/myStore/${data.id}`, dataUpdate, {
           headers: {
@@ -26,7 +24,6 @@ export const updateAmount = createAsyncThunk('cart/updateAmount', async(data,thu
         dispatch(removeCart(data))
         return req.data;
       } catch (error) {
-        console.log(error.response.data.message)
         return rejectWithValue(error.response.data.message);
       }
   
@@ -47,7 +44,6 @@ const cartSlice = createSlice({
     initialState,
     reducers:{
         addCart:(state,action)=>{
-            console.log(state.cart)
             const isInCart = state.cart.findIndex(ele=>ele.id === action.payload.id)
             if(isInCart >= 0) {
                 state.cart[isInCart].cartQuantity++

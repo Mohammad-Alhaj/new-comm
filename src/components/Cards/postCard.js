@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Access from '../Access/Access';
+import cookie from "react-cookies";
 import './Card.css'
 export default function PostCards({postData}) {
     const [show, setShow] = useState(false);
@@ -32,18 +33,21 @@ export default function PostCards({postData}) {
 
                 postData(sendData)
     }
+    let role = cookie.load('userAccess')
 
+// console.log(x)
     return(
         <>
         <Access action="delete">
         <Button variant="primary" size="lg" onClick={handleShow} className="ms-4 mt-3">
         Add Product
       </Button>
+    
         {/* <Button variant="primary" style={{padding:'1px'}}>
        
         </Button> */}
         </Access>
-  
+        <p className='ms-4 access'>{`${role} dashbord`}</p>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>

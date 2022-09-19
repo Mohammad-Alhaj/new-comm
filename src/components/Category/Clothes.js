@@ -8,7 +8,7 @@ export default function Clothes(props)  {
 const dispatch = useDispatch()
     return(
         <>
-        {console.log( <Cards/>)}
+        {/* {console.log( <Cards/>)} */}
         <Cards/>
       
         </>

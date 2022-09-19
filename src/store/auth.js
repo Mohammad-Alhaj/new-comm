@@ -13,11 +13,9 @@ const {rejectWithValue} = thunkApi
               'authorization':`Basic ${base64.encode(`${info.username}:${info.password}`)}`  
             }
         })
-        console.log(request.data)
         return request.data
 
     }catch(err){
-        console.log(err)
         return rejectWithValue(err.message)
     }
 
@@ -28,10 +26,8 @@ export const singup = createAsyncThunk('auth/singup',async (info,thunkApi)=>{
     const {rejectWithValue} = thunkApi
     try{
     const request = await axios.post(`${url}/signup`,info)
-    console.log(request.data)
     return request.data
     }catch(error){
-        console.log(error)
         return rejectWithValue(error.response.data.message)
     }
 }) 
@@ -51,7 +47,6 @@ export const singup = createAsyncThunk('auth/singup',async (info,thunkApi)=>{
 
     reducers:{
         isSinginRed(state,action){
-            console.log(action.payload)
             state.isSingin=action.payload
         },
         // permission(state,action) {
@@ -64,6 +59,7 @@ export const singup = createAsyncThunk('auth/singup',async (info,thunkApi)=>{
             state.isSingin = true
             cookie.save('token',action.payload.token)
             cookie.save('actions',action.payload.actions)
+             cookie.save('userAccess',action.payload.role)
             state.actions = cookie.load('actions')
          state.isLoading = false
          state.errorSingin = null
